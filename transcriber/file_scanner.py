@@ -3,7 +3,7 @@ from pathlib import Path
 
 def find_media_files(directory):
     """
-    Recursively scans the given directory for media files (audio and video).
+    Recursively scan the given directory for media files (audio and video).
     
     Args:
         directory (str): Path to the folder to scan.
