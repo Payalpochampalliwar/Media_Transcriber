@@ -7,7 +7,7 @@ def extract_audio(video_path):
     
     Args:
         video_path (str): the Path to video file.
-
+ 
     Returns:
         str: the Path to extracted audio file.
     """
