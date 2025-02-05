@@ -3,13 +3,13 @@ from pathlib import Path
 
 def extract_audio(video_path):
     """
-    Extracts audio from a video file using ffmpeg.
+    Retrieve audio from a video file using ffmpeg.
     
     Args:
-        video_path (str): Path to the video file.
+        video_path (str): the Path to video file.
 
     Returns:
-        str: Path to the extracted audio file.
+        str: the Path to extracted audio file.
     """
     audio_path = str(Path(video_path).with_suffix('.mp3'))
     
