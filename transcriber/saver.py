@@ -9,9 +9,9 @@ def save_transcription(file_path, text, output_folder="transcriptions", output_f
         file_path (str): Path to the original media file.
         text (str): Transcribed text.
         output_folder (str): Folder to store transcriptions.
-        output_format (str): File format to save ("txt" or "json").
+        output_format (str): Output File format to save in ("txt" or "json") form.
     """
-    os.makedirs(output_folder, exist_ok=True)  # Ensure the output folder exists
+    os.makedirs(output_folder, exist_ok=True)  # Make sure the output folder exists
     
     base_name = os.path.basename(file_path)
     output_path = os.path.join(output_folder, f"{base_name}.{output_format}")
