@@ -12,7 +12,7 @@ def process_directory(directory):
     Args:
         directory (str): Path to the folder containing media files.
     """
-    print("🔍 Scanning for media files...")
+    print("??? Scanning for media files...")
     media_files = find_media_files(directory)
 
     if not media_files:
@@ -20,15 +20,15 @@ def process_directory(directory):
         return
 
     for file_path in media_files:
-        print(f"\n🎧 Processing: {os.path.basename(file_path)}")
+        print(f"\n??? Processing: {os.path.basename(file_path)}")
 
         # Extract audio if it's a video file
         if file_path.endswith(('.mp4', '.avi', '.mov', '.mkv', '.flv', '.webm')):
-            print("🎥 Extracting audio from video...")
+            print("??? Extracting audio from video...")
             file_path = extract_audio(file_path)
 
         # Transcribe the audio
-        print("📝 Transcribing audio...")
+        print("??? Transcribing audio...")
         text = transcribe_audio(file_path, MODEL_SIZE)
 
         # Save transcription
